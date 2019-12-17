@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7991852D-D13F-42EE-8462-4A92C5615F25}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Betfair</RootNamespace>
+    <AssemblyName>Betfair</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Leaf.xNet, Version=5.1.88.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Leaf.xNet.5.1.88\lib\net452\Leaf.xNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action\Parametrs.cs" />
+    <Compile Include="Action\Request.cs" />
+    <Compile Include="IClient.cs" />
+    <Compile Include="JsonRpcClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Json\JsonConvert.cs" />
+    <Compile Include="Json\JsonRequest.cs" />
+    <Compile Include="Json\JsonResponse.cs" />
+    <Compile Include="Json\RescriptRequest.cs" />
+    <Compile Include="Models\Accaunt\DeveloperApp.cs" />
+    <Compile Include="Models\Accaunt\AccountDetailsResponse.cs" />
+    <Compile Include="Models\Betting\MarketTypeResult.cs" />
+    <Compile Include="Models\Betting\ClearedOrderSummaryReport.cs" />
+    <Compile Include="Models\Betting\CountryCodeResult.cs" />
+    <Compile Include="Models\Betting\VenueResult.cs" />
+    <Compile Include="Models\Betting\TimeRangeResult.cs" />
+    <Compile Include="Models\DeveloperAppVersion.cs" />
+    <Compile Include="Models\Oauth\AuthWebss.cs" />
+    <Compile Include="Models\Oauth\AuthWeb.cs" />
+    <Compile Include="Models\Oauth\Requests.cs" />
+    <Compile Include="Models\TimeGranularity.cs" />
+    <Compile Include="Models\TypeApi.cs" />
+    <Compile Include="test.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RescriptClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Models\Accaunt\AccountFundsResponse.cs" />
+    <Compile Include="Models\APINGException.cs" />
+    <Compile Include="Models\BetStatus.cs" />
+    <Compile Include="Models\Betting\CancelExecutionReport-Mrt.cs" />
+    <Compile Include="Models\CancelInstruction.cs" />
+    <Compile Include="Models\CancelInstructionReport.cs" />
+    <Compile Include="Models\ClearedOrderSummary.cs" />
+    <Compile Include="Models\Competition.cs" />
+    <Compile Include="Models\Betting\CompetitionResult.cs" />
+    <Compile Include="Models\CurrentOrderSummary.cs" />
+    <Compile Include="Models\Betting\CurrentOrderSummaryReport.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\Betting\EventResult.cs" />
+    <Compile Include="Models\EventType.cs" />
+    <Compile Include="Models\Betting\EventTypeResult.cs" />
+    <Compile Include="Models\ExBestOffersOverrides.cs" />
+    <Compile Include="Models\Exception.cs" />
+    <Compile Include="Models\ExchangePrices.cs" />
+    <Compile Include="Models\ExecutionReportErrorCode.cs" />
+    <Compile Include="Models\ExecutionReportStatus.cs" />
+    <Compile Include="Models\GroupBy-Mrt.cs" />
+    <Compile Include="Models\InstructionReportErrorCode.cs" />
+    <Compile Include="Models\InstructionReportStatus.cs" />
+    <Compile Include="Models\ItemDescription.cs" />
+    <Compile Include="Models\LimitOnCloseOrder.cs" />
+    <Compile Include="Models\LimitOrder.cs" />
+    <Compile Include="Models\MarketBettingType.cs" />
+    <Compile Include="Models\Betting\MarketBook.cs" />
+    <Compile Include="Models\Betting\MarketCatalogue.cs" />
+    <Compile Include="Models\MarketDescription.cs" />
+    <Compile Include="Models\MarketFilter.cs" />
+    <Compile Include="Models\MarketOnCloseOrder.cs" />
+    <Compile Include="Models\Betting\MarketProfitAndLoss.cs" />
+    <Compile Include="Models\MarketProjection.cs" />
+    <Compile Include="Models\MarketSort.cs" />
+    <Compile Include="Models\MarketStatus.cs" />
+    <Compile Include="Models\Match.cs" />
+    <Compile Include="Models\MatchProjection.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderBy.cs" />
+    <Compile Include="Models\OrderProjection.cs" />
+    <Compile Include="Models\OrderStatus.cs" />
+    <Compile Include="Models\OrderType.cs" />
+    <Compile Include="Models\PersistenceType.cs" />
+    <Compile Include="Models\Betting\PlaceExecutionReport.cs" />
+    <Compile Include="Models\PlaceInstruction.cs" />
+    <Compile Include="Models\PlaceInstructionReport.cs" />
+    <Compile Include="Models\PriceData.cs" />
+    <Compile Include="Models\PriceProjection.cs" />
+    <Compile Include="Models\PriceSize.cs" />
+    <Compile Include="Models\Betting\ReplaceExecutionReport.cs" />
+    <Compile Include="Models\ReplaceInstruction.cs" />
+    <Compile Include="Models\ReplaceInstructionReport.cs" />
+    <Compile Include="Models\RollUpModel.cs" />
+    <Compile Include="Models\Runner.cs" />
+    <Compile Include="Models\RunnerDescription.cs" />
+    <Compile Include="Models\RunnerId-Mrt.cs" />
+    <Compile Include="Models\RunnerProfitAndLost.cs" />
+    <Compile Include="Models\RunnerStatus.cs" />
+    <Compile Include="Models\Side.cs" />
+    <Compile Include="Models\SortDir.cs" />
+    <Compile Include="Models\StartingPrices.cs" />
+    <Compile Include="Models\TimeRange.cs" />
+    <Compile Include="Models\Betting\UpdateExecutionReport.cs" />
+    <Compile Include="Models\UpdateInstruction.cs" />
+    <Compile Include="Models\UpdateInstructionReport.cs" />
+    <Compile Include="Models\Wallet.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
