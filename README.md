@@ -7,3 +7,9 @@
 Эту библиотеку я изменил, добавил все новые методы, а так же добавил метод авторизации. Авторизация работает через web версию(post/get). Есть 2 вида авторизации:
 1. Используя leaf.xnet 
 2. Используя HttpRequest
+
+Web страница на которой можно проверить все методы API:
+1. [Методы работы с аккаунтом](https://docs.developer.betfair.com/visualisers/api-ng-account-operations/)
+2. [Остальные методы](https://docs.developer.betfair.com/visualisers/api-ng-sports-operations/)
+3. [Описание всех методов сервис](https://docs.developer.betfair.com/)
+Эти ссылки можно найти и на самом сайте в api, но оставлю их тут что бы не потерять в будущем
